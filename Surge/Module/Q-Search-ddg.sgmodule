@@ -1,0 +1,129 @@
+#!name=Q-Search-ddg
+#!desc=🔍 Search Add-ons by phpluo. Update on 2023-08-16
+
+
+    [URL Rewrite]
+#gm   (Google Image)
+^https:\/\/duckduckgo.com\/\?q=gm\s+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
+# gh   (GitHub)
+^https:\/\/duckduckgo.com\/\?q=gh\s+([^&]+).+ https://github.com/search?q=$1 302
+
+# sof  (Stack Overflow)
+^https:\/\/duckduckgo.com\/\?q=sof\s+([^&]+).+ https://stackoverflow.com/search?q=$1 302
+
+# se  (StackExchange)
+^https:\/\/duckduckgo.com\/\?q=se\s+([^&]+).+ https://stackexchange.com/search?q=$1 302
+
+# wa  (WolframAlpha)
+^https:\/\/duckduckgo.com\/\?q=wa\s+([^&]+).+ https://www.wolframalpha.com/input/?i=$1 302
+
+# wiki  (维基百科)
+^https:\/\/duckduckgo.com\/\?q=wiki(\+|%20)([^&]+).+ http://wikipedia.org/wiki/$2 302
+
+# wk  (维基中文)
+^https:\/\/duckduckgo.com\/\?q=wk(\+|%20)([^&]+).+ https://zh.wikipedia.org/wiki/$2 302
+
+# mg  (Magi)
+^https:\/\/duckduckgo.com\/\?q=mg(\+|%20)([^&]+).+ https://magi.com/search?q=$2
+
+# tf  (Google 搜索 TestFlight)
+^https:\/\/duckduckgo.com\/\?q=tf(\+|%20)([^&]+).+ https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com 302
+
+# > 翻译
+# yd   (有道)
+^https:\/\/duckduckgo.com\/\?q=yd\s+([^&]+).+ http://dict.youdao.com/search?q=$1 302
+
+# trc  (Google 译至中)
+^https:\/\/duckduckgo.com\/\?q=trc\s+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$1 302
+
+# tre  (Google 译至英)
+^https:\/\/duckduckgo.com\/\?q=tre\s+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$1 302
+
+# trj  (Google 译至日)
+^https:\/\/duckduckgo.com\/\?q=trj\s+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$1 302
+
+
+# 社区
+# db：豆瓣
+^https:\/\/duckduckgo.com\/\?q=db\s+([^&]+).+ https://www.douban.com/search?source=suggest&q=$1 302
+
+# zh: 知乎
+^https:\/\/duckduckgo.com\/\?q=zh\s+([^&]+).+ https://www.zhihu.com/search?type=content&q=$1 302
+
+# wb: 微博
+^https:\/\/duckduckgo.com\/\?q=wb\s+([^&]+).+ https://s.weibo.com/weibo/$1 302
+
+# wx: 微信
+^https:\/\/duckduckgo.com\/\?q=wx\s+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
+
+# rd  (Reddit)
+^https:\/\/duckduckgo.com\/\?q=rd\s+([^&]+).+ https://www.reddit.com/search?q=$1 302
+
+# tw (Twitter)
+^https:\/\/duckduckgo.com\/\?q=tw\s+([^&]+).+ https://twitter.com/search?q=$1 302
+
+# ssp: 少数派
+^https:\/\/duckduckgo.com\/\?q=ssp\s+([^&]+).+ https://sspai.com/search/post/$1 302
+
+# csdn: CSDN
+^https:\/\/duckduckgo.com\/\?q=csdn\s+([^&]+).+ https://so.csdn.net/so/search/s.do?q=$1&t=&u= 302
+
+# > 购物
+# zdm: 什么值得买
+^https:\/\/duckduckgo.com\/\?q=zdm\s+([^&]+).+ https://search.smzdm.com/?c=home&s=$1&v=b 302
+
+# amz: 亚马逊
+^https:\/\/duckduckgo.com\/\?q=amz\s+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
+
+# jd : 京东
+^https:\/\/duckduckgo.com\/\?q=jd\s+([^&]+).+ https://search.jd.com/Search?keyword=$1 302
+
+# tb: 淘宝
+^https:\/\/duckduckgo.com\/\?q=tb\s+([^&]+).+ https://s.taobao.com/search?q=$1 302
+
+# tm: 天猫
+^https:\/\/duckduckgo.com\/\?q=tm\s+([^&]+).+ https://list.tmall.com/search_product.htm?q=$1 302
+
+# 视频资源
+
+# ac (Acfun)
+^https:\/\/duckduckgo.com\/\?q=ac\s+([^&]+).+ https://www.acfun.cn/search?keyword==$1 302
+
+# bli (哔哩哔哩)
+^https:\/\/duckduckgo.com\/\?q=bli\s+([^&]+).+ https://search.bilibili.com/all?keyword=$1 302
+
+# ytb  (YouTube)
+^https:\/\/duckduckgo.com\/\?q=ytb\s+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
+
+# ph  (PornHub)
+^https:\/\/duckduckgo.com\/\?q=ph\s+([^&]+).+ https://pornhub.com/video/search?search=$1 302
+
+# gd  (Google Drive)
+^https:\/\/duckduckgo.com\/\?q=gd\s+([^&]+).+ https://www.google.com/search?q=%22Google+Drive%22+$1 302
+
+# tgd  (t.me/gdurl 搜索 Google Drive 资源)
+^https:\/\/duckduckgo.com\/\?q=tgd\s+([^&]+).+ https://t.me/s/gdurl?q=$1 302
+
+# 默认搜索
+
+# bi: 必应
+^https:\/\/duckduckgo.com\/\?q=bi\s+([^&]+).+ https://cn.bing.com/search?q=$1 302
+
+# bd: 百度
+^https:\/\/duckduckgo.com\/\?q=bd\s+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+
+# ddg: DuckDuckGo
+^https:\/\/duckduckgo.com\/\?q=ddg\s+([^&]+).+ https://duckduckgo.com/?ia=about&q=$1 302
+
+# yh: Yahoo Japan
+^https:\/\/duckduckgo.com\/\?q=yh\s+([^&]+).+ https://search.yahoo.co.jp/search?p=$1 302
+
+# nv: Naver Korean
+^https:\/\/duckduckgo.com\/\?q=nv\s+([^&]+).+ https://search.naver.com/search.naver?query=$1 302
+
+# 无指令: 谷歌
+^https:\/\/duckduckgo.com\/\?q=\s*([^&]+).+ https://www.google.com/search?q=$1 302
+
+
+    [MITM]
+hostname = %APPEND% duckduckgo.com
